@@ -1,0 +1,10 @@
+monitors:
+  - network:
+      metrics:
+        - net_io
+  - file_watcher:
+      paths: 
+        - /usr/sbin/
+        - /etc
+  - name: cpu
+  - name: memory
