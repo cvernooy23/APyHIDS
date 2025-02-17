@@ -19,7 +19,7 @@ def network_worker(queue):
     processes = []
     process = multiprocessing.Process(target=netmon, args=(queue,))
     process.start()
-    processes.append(process)
+    processes.append(process)    
     return processes
 
 def filewatcher_worker(queue, paths):
@@ -39,7 +39,7 @@ def consumer(queue,monitor_num):
             active_workers-= 1
             print("Consumer: Producer has died.")
         else:
-            print(f"Consumer: Retrieved {item}")
+            print(f"Consumer: {item}")
         time.sleep(1)
 
 def start_execution(output_file):
